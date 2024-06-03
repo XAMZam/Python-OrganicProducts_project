@@ -1,0 +1,103 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container mt-5">
+        <h1>Welcome to MyShopCare</h1>
+
+        <h2>Body Soaps</h2>
+        <div class="row">
+            {% for soap in body_soaps %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ soap.image }}" class="card-img-top" alt="{{ soap.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ soap.name }}</h5>
+                        <p class="card-text">{{ soap.description }}</p>
+                        <p class="card-text">Price: ${{ soap.price }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h2>Face Cleansers</h2>
+        <div class="row">
+            {% for cleanser in face_cleansers %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ cleanser.image }}" class="card-img-top" alt="{{ cleanser.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ cleanser.name }}</h5>
+                        <p class="card-text">{{ cleanser.description }}</p>
+                        <p class="card-text">Price: ${{ cleanser.price }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h2>Liquid Soaps</h2>
+        <div class="row">
+            {% for liquid_soap in liquid_soaps %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ liquid_soap.image }}" class="card-img-top" alt="{{ liquid_soap.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ liquid_soap.name }}</h5>
+                        <p class="card-text">{{ liquid_soap.description }}</p>
+                        <p class="card-text">Price: ${{ liquid_soap.price }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h2>Oils</h2>
+        <div class="row">
+            {% for oil in oils %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ oil.image }}" class="card-img-top" alt="{{ oil.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ oil.name }}</h5>
+                        <p class="card-text">{{ oil.description }}</p>
+                        <p class="card-text">Price: ${{ oil.price }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h2>Scrubs</h2>
+        <div class="row">
+            {% for scrub in scrubs %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ scrub.image }}" class="card-img-top" alt="{{ scrub.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ scrub.name }}</h5>
+                        <p class="card-text">{{ scrub.description }}</p>
+                        <p class="card-text">Price: ${{ scrub.price }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h2>Shampoos</h2>
+        <div class="row">
+            {% for shampoo in shampoos %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ shampoo.image }}" class="card-img-top" alt="{{ shampoo.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ shampoo.name }}</h5>
+                        <p class="card-text">{{ shampoo.description }}</p>
+                        <p class="card-text">Price: ${{ shampoo.price }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
